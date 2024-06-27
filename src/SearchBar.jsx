@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 function SearchBar({ searchTerm, setSearchTerm }) {
   return (
@@ -9,8 +9,9 @@ function SearchBar({ searchTerm, setSearchTerm }) {
         value={searchTerm}
         onChange={(e) => setSearchTerm(e.target.value)}
       />
-      <button onClick={searchTerm}>Search</button>
+      <button onClick={() => console.log(searchTerm)}>Search</button>
     </div>
   );
 }
+
 export default SearchBar;

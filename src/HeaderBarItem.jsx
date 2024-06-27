@@ -1,92 +1,93 @@
-import React, { useState } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 
 function HeaderBarItem() {
-  const [count, setCount] = useState(0);
-  const [count2, setCount2] = useState(0);
-  const content = (
-    <>
-      <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
-        <div className="container-fluid">
-          <a className="navbar-brand" href="#">
-            Navbar
-          </a>
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarColor01"
-            aria-controls="navbarColor01"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon"></span>
-          </button>
-          <div className="collapse navbar-collapse" id="navbarColor01">
-            <ul className="navbar-nav me-auto">
-              <li className="nav-item">
-                <a className="nav-link active" href="#">
-                  Home
-                  <span className="visually-hidden">(current)</span>
+  return (
+    <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+      <div className="container-fluid">
+        <Link className="navbar-brand" to="/">
+          Navbar
+        </Link>
+        <button
+          className="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarColor01"
+          aria-controls="navbarColor01"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span className="navbar-toggler-icon"></span>
+        </button>
+        <div className="collapse navbar-collapse" id="navbarColor01">
+          <ul className="navbar-nav me-auto">
+            <li className="nav-item">
+              <Link className="nav-link active" to="/">
+                Home
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/checkout">
+                Checkout
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/products">
+                Products
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/questions">
+                FAQ
+              </Link>
+            </li>
+            <li className="nav-item">
+              <a className="nav-link" href="#">
+                About
+              </a>
+            </li>
+            <li className="nav-item dropdown">
+              <a
+                className="nav-link dropdown-toggle"
+                data-bs-toggle="dropdown"
+                href="#"
+                role="button"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Dropdown
+              </a>
+              <div className="dropdown-menu">
+                <a className="dropdown-item" href="#">
+                  Action
                 </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Features
+                <a className="dropdown-item" href="#">
+                  Another action
                 </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Pricing
+                <a className="dropdown-item" href="#">
+                  Something else here
                 </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  About
+                <div className="dropdown-divider"></div>
+                <a className="dropdown-item" href="#">
+                  Separated link
                 </a>
-              </li>
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  data-bs-toggle="dropdown"
-                  href="#"
-                  role="button"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Dropdown
-                </a>
-                <div className="dropdown-menu">
-                  <a className="dropdown-item" href="#">
-                    Action
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Another action
-                  </a>
-                  <a className="dropdown-item" href="#">
-                    Something else here
-                  </a>
-                  <div className="dropdown-divider"></div>
-                  <a className="dropdown-item" href="#">
-                    Separated link
-                  </a>
-                </div>
-              </li>
-            </ul>
-            <form className="d-flex">
-              <input
-                className="form-control me-sm-2"
-                type="search"
-                placeholder="Search"
-              />
-              <button className="btn btn-secondary my-2 my-sm-0" type="submit">
-                Search
-              </button>
-            </form>
-          </div>
+              </div>
+            </li>
+          </ul>
+          <form className="d-flex">
+            <input
+              className="form-control me-sm-2"
+              type="search"
+              placeholder="Search"
+            />
+            <button className="btn btn-secondary my-2 my-sm-0" type="submit">
+              Search
+            </button>
+          </form>
         </div>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
-  return content;
 }
+
 export default HeaderBarItem;

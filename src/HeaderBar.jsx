@@ -1,12 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import HeaderBarItem from "./HeaderBarItem";
-import SearchBar from "./SearchBar";
+import Header from "./Header";
+
 function HeaderBar() {
   return (
     <div>
+      <Header />
       <HeaderBarItem />
-      <SearchBar />
     </div>
   );
 }
+
 export default HeaderBar;
