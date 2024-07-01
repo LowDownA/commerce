@@ -1,9 +1,22 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import { Link } from "react-router-dom";
 
 function HeaderBarItem() {
+    const  [navIsFixed, setNavIsFixed]  =  useState(false);
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 0) {
+                setNavIsFixed(true);
+            } else {
+                setNavIsFixed(false);
+            }
+        }
+        window.addEventListener("scroll", handleScroll);
+        return () => window.removeEventListener("scroll", handleScroll);
+        }, [])
   return (
-    <nav className="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <nav className={`navbar navbar-expand-lg bg-primary ${navIsFixed ? "fixed-top" : ""}`} data-bs-theme="dark">
+
       <div className="container-fluid">
         <Link className="navbar-brand" to="/">
           Navbar
@@ -22,7 +35,7 @@ function HeaderBarItem() {
         <div className="collapse navbar-collapse" id="navbarColor01">
           <ul className="navbar-nav me-auto">
             <li className="nav-item">
-              <Link className="nav-link active" to="/">
+              <Link className="nav-link active" to="/home">
                 Home
               </Link>
             </li>
@@ -32,7 +45,7 @@ function HeaderBarItem() {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link" to="/products">
+              <Link className="nav-link" to="/productslist">
                 Products
               </Link>
             </li>
@@ -46,6 +59,9 @@ function HeaderBarItem() {
                 About
               </a>
             </li>
+            <button type="button" className="btn btn-primary" data-mdb-ripple-init >
+ 🛒 Shopping cart<span className="badge badge-danger ms-2">8</span>
+</button>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle"
@@ -71,6 +87,7 @@ function HeaderBarItem() {
                 <a className="dropdown-item" href="#">
                   Separated link
                 </a>
+                
               </div>
             </li>
           </ul>

@@ -8,17 +8,21 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min.js"; // Use bootstrap.bundle.min.js for both CSS and JS
 import Products from "./Products";
 import Questions from "./Questions"; // Ensure correct import path for Questions
-
+import ProductsList from "./ProductsList";
+import Footer from "./Footer";
+import Home from "./Home";
 const App = () => {
   const [searchTerm, setSearchTerm] = useState("");
+  const [keepShopping, setKeepShopping] =  useState(false);
 
   return (
     <div>
       <HeaderBarItem />
 
       <Header />
+
       <Routes>
-        <Route path="/checkout" element={<CheckoutForm />} />
+        <Route path="/checkout" element={<CheckoutForm doMoreShopping={keepShopping} setDoMoreShopping={setKeepShopping} />} />
         <Route
           path="/questions"
           element={
@@ -26,10 +30,12 @@ const App = () => {
           } // Pass props if needed
         />
         <Route
-          path="/products"
-          element={<Products searchTerm={searchTerm} />}
+          path="/productslist"
+          element={<ProductsList searchTerm={searchTerm} />}
         />
+        <Route path="/home" element={<Home />} />
       </Routes>
+      <Footer />
     </div>
   );
 };

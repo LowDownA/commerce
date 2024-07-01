@@ -1,234 +1,231 @@
 import React from "react";
 
-function CheckoutForm() {
-  return (
-    <form>
-      <fieldset>
-        <legend>Legend</legend>
-        <div className="row">
-          <label htmlFor="staticEmail" className="col-sm-2 col-form-label">
-            Email
-          </label>
-          <div className="col-sm-10">
-            <input
-              type="text"
-              readOnly
-              className="form-control-plaintext"
-              id="staticEmail"
-              value="email@example.com"
-            />
-          </div>
-        </div>
-        <div>
-          <label htmlFor="exampleInputEmail1" className="form-label mt-4">
-            Email address
-          </label>
-          <input
-            type="email"
-            className="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-            placeholder="Enter email"
-          />
-          <small id="emailHelp" className="form-text text-muted">
-            We'll never share your email with anyone else.
-          </small>
-        </div>
-        <div>
-          <label htmlFor="exampleInputPassword1" className="form-label mt-4">
-            Password
-          </label>
-          <input
-            type="password"
-            className="form-control"
-            id="exampleInputPassword1"
-            placeholder="Password"
-            autoComplete="off"
-          />
-        </div>
-        <div>
-          <label htmlFor="exampleSelect1" className="form-label mt-4">
-            Example select
-          </label>
-          <select className="form-select" id="exampleSelect1">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div>
-          <label htmlFor="exampleDisabledSelect1" className="form-label mt-4">
-            Example disabled select
-          </label>
-          <select className="form-select" id="exampleDisabledSelect1" disabled>
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div>
-          <label htmlFor="exampleSelect2" className="form-label mt-4">
-            Example multiple select
-          </label>
-          <select multiple className="form-select" id="exampleSelect2">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-        </div>
-        <div>
-          <label htmlFor="exampleTextarea" className="form-label mt-4">
-            Example textarea
-          </label>
-          <textarea
-            className="form-control"
-            id="exampleTextarea"
-            rows="3"
-          ></textarea>
-        </div>
-        <div>
-          <label htmlFor="formFile" className="form-label mt-4">
-            Default file input example
-          </label>
-          <input className="form-control" type="file" id="formFile" />
-        </div>
-        <fieldset>
-          <legend className="mt-4">Radio buttons</legend>
-          <div className="form-check">
-            <input
-              className="form-check-input"
-              type="radio"
-              name="optionsRadios"
-              id="optionsRadios1"
-              value="option1"
-              defaultChecked
-            />
-            <label className="form-check-label" htmlFor="optionsRadios1">
-              Option one is this and that—be sure to include why it's great
-            </label>
-          </div>
-          <div className="form-check">
-            <input
-              className="form-check-input"
-              type="radio"
-              name="optionsRadios"
-              id="optionsRadios2"
-              value="option2"
-            />
-            <label className="form-check-label" htmlFor="optionsRadios2">
-              Option two can be something else and selecting it will deselect
-              option one
-            </label>
-          </div>
-          <div className="form-check disabled">
-            <input
-              className="form-check-input"
-              type="radio"
-              name="optionsRadios"
-              id="optionsRadios3"
-              value="option3"
-              disabled
-            />
-            <label className="form-check-label" htmlFor="optionsRadios3">
-              Option three is disabled
-            </label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend className="mt-4">Checkboxes</legend>
-          <div className="form-check">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckDefault"
-            />
-            <label className="form-check-label" htmlFor="flexCheckDefault">
-              Default checkbox
-            </label>
-          </div>
-          <div className="form-check">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              value=""
-              id="flexCheckChecked"
-              defaultChecked
-            />
-            <label className="form-check-label" htmlFor="flexCheckChecked">
-              Checked checkbox
-            </label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend className="mt-4">Switches</legend>
-          <div className="form-check form-switch">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              id="flexSwitchCheckDefault"
-            />
-            <label
-              className="form-check-label"
-              htmlFor="flexSwitchCheckDefault"
-            >
-              Default switch checkbox input
-            </label>
-          </div>
-          <div className="form-check form-switch">
-            <input
-              className="form-check-input"
-              type="checkbox"
-              id="flexSwitchCheckChecked"
-              defaultChecked
-            />
-            <label
-              className="form-check-label"
-              htmlFor="flexSwitchCheckChecked"
-            >
-              Checked switch checkbox input
-            </label>
-          </div>
-        </fieldset>
-        <fieldset>
-          <legend className="mt-4">Ranges</legend>
-          <label htmlFor="customRange1" className="form-label">
-            Example range
-          </label>
-          <input type="range" className="form-range" id="customRange1" />
-          <label htmlFor="disabledRange" className="form-label">
-            Disabled range
-          </label>
-          <input
-            type="range"
-            className="form-range"
-            id="disabledRange"
-            disabled
-          />
-          <label htmlFor="customRange3" className="form-label">
-            Example range
-          </label>
-          <input
-            type="range"
-            className="form-range"
-            min="0"
-            max="5"
-            step="0.5"
-            id="customRange3"
-          />
-        </fieldset>
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </fieldset>
-    </form>
-  );
-}
 
+function CheckoutForm({doMoreShopping, setDoMoreShopping}) {
+    return (
+        <section className="h-100 h-custom" style={{ backgroundColor: "#eee" }}>
+            <div className="container py-5 h-100">
+                <div className="row d-flex justify-content-center align-items-center h-100">
+                    <div className="col">
+                        <div className="card">
+                            <div className="card-body p-4">
+
+                                <div className="row">
+
+                                    <div className="col-lg-7">
+                                        <h5 className="mb-3"><a href="#!" className="text-body"><i
+                                            className="fas fa-long-arrow-alt-left me-2"></i>Continue shopping</a></h5>
+                                        <hr />
+
+                                        <div className="d-flex justify-content-between align-items-center mb-4">
+                                            <div>
+                                                <p className="mb-1">Shopping cart</p>
+                                                <p className="mb-0">You have 4 items in your cart</p>
+                                            </div>
+                                            <div>
+                                                <p className="mb-0"><span className="text-muted">Sort by:</span> <a href="#!"
+                                                    className="text-body">price <i className="fas fa-angle-down mt-1"></i></a></p>
+                                            </div>
+                                        </div>
+
+                                        <div className="card mb-3">
+                                            <div className="card-body">
+                                                <div className="d-flex justify-content-between">
+                                                    <div className="d-flex flex-row align-items-center">
+                                                        <div>
+                                                            <img
+                                                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img1.webp"
+                                                                className="img-fluid rounded-3" alt="Shopping item" style={{ width: "65px" }} />
+                                                        </div>
+                                                        <div className="ms-3">
+                                                            <h5>Iphone 11 pro</h5>
+                                                            <p className="small mb-0">256GB, Navy Blue</p>
+                                                        </div>
+                                                    </div>
+                                                    <div className="d-flex flex-row align-items-center">
+                                                        <div style={{ width: "50px" }}>
+                                                            <h5 className="fw-normal mb-0">2</h5>
+                                                        </div>
+                                                        <div style={{ width: "80px" }}>
+                                                            <h5 className="mb-0">$900</h5>
+                                                        </div>
+                                                        <a href="#!" style={{ color: "#cecece" }}><i className="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="card mb-3">
+                                            <div className="card-body">
+                                                <div className="d-flex justify-content-between">
+                                                    <div className="d-flex flex-row align-items-center">
+                                                        <div>
+                                                            <img
+                                                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img2.webp"
+                                                                className="img-fluid rounded-3" alt="Shopping item" style={{ width: "65px" }} />
+                                                        </div>
+                                                        <div className="ms-3">
+                                                            <h5>Samsung galaxy Note 10 </h5>
+                                                            <p className="small mb-0">256GB, Navy Blue</p>
+                                                        </div>
+                                                    </div>
+                                                    <div className="d-flex flex-row align-items-center">
+                                                        <div style={{ width: "50px" }}>
+                                                            <h5 className="fw-normal mb-0">2</h5>
+                                                        </div>
+                                                        <div style={{ width: "80px" }}>
+                                                            <h5 className="mb-0">$900</h5>
+                                                        </div>
+                                                        <a href="#!" style={{ color: "#cecece" }}><i className="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="card mb-3">
+                                            <div className="card-body">
+                                                <div className="d-flex justify-content-between">
+                                                    <div className="d-flex flex-row align-items-center">
+                                                        <div>
+                                                            <img
+                                                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img3.webp"
+                                                                className="img-fluid rounded-3" alt="Shopping item" style={{ width: "65px" }} />
+                                                        </div>
+                                                        <div className="ms-3">
+                                                            <h5>Canon EOS M50</h5>
+                                                            <p className="small mb-0">Onyx Black</p>
+                                                        </div>
+                                                    </div>
+                                                    <div className="d-flex flex-row align-items-center">
+                                                        <div style={{ width: "50px" }}>
+                                                            <h5 className="fw-normal mb-0">1</h5>
+                                                        </div>
+                                                        <div style={{ width: "80px" }}>
+                                                            <h5 className="mb-0">$1199</h5>
+                                                        </div>
+                                                        <a href="#!" style={{ color: "#cecece" }}><i className="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div className="card mb-3 mb-lg-0">
+                                            <div className="card-body">
+                                                <div className="d-flex justify-content-between">
+                                                    <div className="d-flex flex-row align-items-center">
+                                                        <div>
+                                                            <img
+                                                                src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-shopping-carts/img4.webp"
+                                                                className="img-fluid rounded-3" alt="Shopping item" style={{ width: "65px" }} />
+                                                        </div>
+                                                        <div className="ms-3">
+                                                            <h5>MacBook Pro</h5>
+                                                            <p className="small mb-0">1TB, Graphite</p>
+                                                        </div>
+                                                    </div>
+                                                    <div className="d-flex flex-row align-items-center">
+                                                        <div style={{ width: "50px" }}>
+                                                            <h5 className="fw-normal mb-0">1</h5>
+                                                        </div>
+                                                        <div style={{ width: "80px" }}>
+                                                            <h5 className="mb-0">$1799</h5>
+                                                        </div>
+                                                        <a href="#!" style={{ color: "#cecece" }}><i className="fas fa-trash-alt"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div className="col-lg-5">
+
+                                        <div className="card bg-primary text-white rounded-3">
+                                            <div className="card-body">
+                                                <div className="d-flex justify-content-between align-items-center mb-4">
+                                                    <h5 className="mb-0">Card details</h5>
+                                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/avatar-6.webp"
+                                                        className="img-fluid rounded-3" style={{ width: "45px" }} alt="Avatar" />
+                                                </div>
+
+                                                <p className="small mb-2">Card type</p>
+                                                <a href="#!" type="submit" className="text-white"><i
+                                                    className="fab fa-cc-mastercard fa-2x me-2"></i></a>
+                                                <a href="#!" type="submit" className="text-white"><i
+                                                    className="fab fa-cc-visa fa-2x me-2"></i></a>
+                                                <a href="#!" type="submit" className="text-white"><i
+                                                    className="fab fa-cc-amex fa-2x me-2"></i></a>
+                                                <a href="#!" type="submit" className="text-white"><i className="fab fa-cc-paypal fa-2x"></i></a>
+
+                                                <form className="mt-4">
+                                                    <div data-mdb-input-init className="form-outline form-white mb-4">
+                                                        <input type="text" id="typeName" className="form-control form-control-lg" siez="17"
+                                                            placeholder="Cardholder's Name" />
+                                                        <label className="form-label" htmlFor="typeName">Cardholder's Name</label>
+                                                    </div>
+
+                                                    <div data-mdb-input-init className="form-outline form-white mb-4">
+                                                        <input type="text" id="typeText" className="form-control form-control-lg" siez="17"
+                                                            placeholder="1234 5678 9012 3457" minLength="19" maxLength="19" />
+                                                        <label className="form-label" htmlFor="typeText">Card Number</label>
+                                                    </div>
+
+                                                    <div className="row mb-4">
+                                                        <div className="col-md-6">
+                                                            <div data-mdb-input-init className="form-outline form-white">
+                                                                <input type="text" id="typeExp" className="form-control form-control-lg"
+                                                                    placeholder="MM/YYYY" size="7" id="exp" minLength="7" maxLength="7" />
+                                                                <label className="form-label" htmlFor="typeExp">Expiration</label>
+                                                            </div>
+                                                        </div>
+                                                        <div className="col-md-6">
+                                                            <div data-mdb-input-init className="form-outline form-white">
+                                                                <input type="password" id="typeText" className="form-control form-control-lg"
+                                                                    placeholder="●●●" size="1" minLength="3" maxLength="3" />
+                                                                <label className="form-label" htmlFor="typeText">Cvv</label>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </form>
+
+                                                <hr className="my-4" />
+
+                                                <div className="d-flex justify-content-between">
+                                                    <p className="mb-2">Subtotal</p>
+                                                    <p className="mb-2">$4798.00</p>
+                                                </div>
+
+                                                <div className="d-flex justify-content-between">
+                                                    <p className="mb-2">Shipping</p>
+                                                    <p className="mb-2">$20.00</p>
+                                                </div>
+
+                                                <div className="d-flex justify-content-between mb-4">
+                                                    <p className="mb-2">Total(Incl. taxes)</p>
+                                                    <p className="mb-2">$4818.00</p>
+                                                </div>
+
+                                                <button type="button" data-mdb-button-init data-mdb-ripple-init className="btn btn-info btn-block btn-lg">
+                                                    <div className="d-flex justify-content-between">
+                                                        <span>$4818.00</span>
+                                                        <span>Checkout <i className="fas fa-long-arrow-alt-right ms-2"></i></span>
+                                                    </div>
+                                                </button>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    )
+    }
 export default CheckoutForm;
