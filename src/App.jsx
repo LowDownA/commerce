@@ -34,6 +34,7 @@ const App = () => {
           element={<ProductsList searchTerm={searchTerm} />}
         />
         <Route path="/home" element={<Home />} />
+        <Route path="/products" element={<Products />} />
       </Routes>
       <Footer />
     </div>

@@ -72,6 +72,7 @@ function Products({ item, price, imgSrc }) {
                           <a className="btn btn-outline-dark mt-auto" href="#">
                             Add to cart
                           </a>
+                          
                         </div>
                       </div>
                     </div>

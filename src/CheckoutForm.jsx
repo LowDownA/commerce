@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 
 function CheckoutForm({doMoreShopping, setDoMoreShopping}) {
@@ -13,8 +14,8 @@ function CheckoutForm({doMoreShopping, setDoMoreShopping}) {
                                 <div className="row">
 
                                     <div className="col-lg-7">
-                                        <h5 className="mb-3"><a href="#!" className="text-body"><i
-                                            className="fas fa-long-arrow-alt-left me-2"></i>Continue shopping</a></h5>
+                                        <h5 className="mb-3"><Link to="/products" className="text-body"><i
+                                            className="fas fa-long-arrow-alt-left me-2"></i>Continue shopping</Link></h5>
                                         <hr />
 
                                         <div className="d-flex justify-content-between align-items-center mb-4">

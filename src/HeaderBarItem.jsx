@@ -74,9 +74,9 @@ function HeaderBarItem() {
                 Dropdown
               </a>
               <div className="dropdown-menu">
-                <a className="dropdown-item" href="#">
-                  Action
-                </a>
+                <Link className="dropdown-item" to="/checkout">
+                  Go to Checkout
+                </Link>
                 <a className="dropdown-item" href="#">
                   Another action
                 </a>
